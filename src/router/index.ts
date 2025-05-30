@@ -20,6 +20,11 @@ const routes: RouteRecordRaw[] = [
             name: "searchIndex",
             component: () => import("../pages/home/search.vue"),
           },
+          {
+            path: "/webs",
+            name: "websIndex",
+            component: () => import("../pages/webs/index.vue"),
+          },
         ],
       },
     ],

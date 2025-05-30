@@ -53,7 +53,7 @@ const navItem = ref<NavItem[]>([
   },
   {
     title: "网站组",
-    to: "/links",
+    to: "/webs",
     icon: home,
     use: null,
   },
@@ -63,23 +63,12 @@ const navItem = ref<NavItem[]>([
     icon: home,
     use: null,
   },
-  {
-    title: "网站组",
-    to: "/linkSearch",
-    icon: home,
-    use: null,
-  },
-  {
-    title: "我的消息",
-    to: "/message",
-    icon: home,
-    use: null,
-  },
+
 ]);
 
 const navItemClick = (e: NavItem) => {
   navItemIndex.value = e.to;
-  //   router.push(e.to);
+  router.push(e.to);
   e.use.stop();
   e.use.play();
 };
@@ -142,6 +131,7 @@ onMounted(async () => {
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
+    transition: .3s;
     &:hover {
       background: rgba(0, 0, 0, 0.1);
     }
@@ -152,9 +142,7 @@ onMounted(async () => {
   }
   .banner_tab_active {
     background: white;
-    svg {
-      color: blue;
-    }
+
     &:hover {
       background: white;
     }

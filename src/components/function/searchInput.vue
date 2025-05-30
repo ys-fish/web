@@ -81,6 +81,7 @@ let searchIndex = ref<number>(-1);
 const searchChange: any = async (val: InputEvent) => {
   saerchValue.code = (val.target as any).value;
   const data = await searchApi(saerchValue);
+  console.log(data)
   if (data.length >= 1) {
     searchX.value = data;
     active.iszk = true;

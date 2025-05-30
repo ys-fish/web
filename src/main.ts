@@ -1,5 +1,15 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.css";
+import router from "./router";
+import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
+import { createPinia } from "pinia";
+import piniaPlugins from "pinia-plugin-persist";
+import { loadFonts } from "./plugins/webfontloader";
 
-createApp(App).mount('#app')
+loadFonts();
+createApp(App)
+  .use(createPinia().use(piniaPlugins))
+  .use(router)
+  .use(vuetify)
+  .mount("#app");

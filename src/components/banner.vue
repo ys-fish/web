@@ -77,10 +77,7 @@
                     Lorem ipsum
                   </h2>
                   <div>
-                    Lorem ipsum dolor sit amet, no nam oblique veritus. Commune
-                    scaevola imperdiet nec ut, sed euismod convenire principes
-                    at. Est et nobis iisque percipit, an vim zril disputando
-                    voluptatibus, vix an salutandi sententiae.
+                  123
                   </div>
                 </div>
               </v-timeline-item>
@@ -126,6 +123,10 @@ import { nextTick, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import * as home from "../assets/lottie/money (3).json";
 import * as setting from "../assets/lottie/setting.json";
+import * as web from "../assets/lottie/Web.json";
+import * as link from "../assets/lottie/Link (1).json";
+import * as user from "../assets/lottie/approved user.json";
+
 import lottie from "lottie-web";
 const navItemIndex = ref("/");
 const router = useRouter();
@@ -172,13 +173,13 @@ const navItem = ref<NavItem[]>([
   {
     title: "网站组",
     to: "/webs",
-    icon: home,
+    icon: web,
     use: null,
   },
   {
-    title: "网站",
-    to: "/application",
-    icon: home,
+    title: "我的网站",
+    to: "/links",
+    icon: link,
     use: null,
   },
 ]);
@@ -194,7 +195,7 @@ const navItemButton = ref<NavItem[]>([
   {
     title: "用户",
     to: "/user",
-    icon: home,
+    icon: user,
     use: null,
   },
   {

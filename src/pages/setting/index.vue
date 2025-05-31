@@ -1,10 +1,18 @@
 <template>
   <div class="setting">
     <div class="settingBox">
-      <h4>用户设置</h4>
+      <v-text-field
+        append-inner-icon="mdi-magnify"
+        density="compact"
+        label="搜索设置内容"
+        variant="solo"
+        hide-details
+        single-line
+      ></v-text-field>
+      <h4 style="margin-top: 40px">用户设置</h4>
       <v-card class="" style="margin-top: 10px">
-        <v-list style="padding: 0;">
-          <v-list-item color="primary"  >
+        <v-list style="padding: 0">
+          <v-list-item color="primary">
             <div class="userItem">
               <div>
                 <v-avatar>
@@ -14,39 +22,72 @@
                   ></v-img>
                 </v-avatar>
               </div>
-              <div>2313211</div>
+              <div class="userInfo">
+                <div class="userName">2313211</div>
+
+                <div class="userDocs">同步导航到云端</div>
+              </div>
+              <div>
+                <v-btn flat color="error"> 退出登录 </v-btn>
+              </div>
             </div>
           </v-list-item>
           <v-divider></v-divider>
           <v-list-item color="primary" key="2" value="2">
-            <template v-slot:prepend>
-              <v-icon></v-icon>
+            <v-list-item-title style="font-size: 14px"
+              >同步导航</v-list-item-title
+            >
+            <template v-slot:append>
+              <v-icon>mdi-chevron-right</v-icon>
             </template>
-
-            <v-list-item-title>12312312</v-list-item-title>
           </v-list-item>
           <v-divider></v-divider>
           <v-list-item color="primary" key="3" value="3">
-            <template v-slot:prepend>
-              <v-icon></v-icon>
+            <v-list-item-title style="font-size: 14px"
+              >自定义主题</v-list-item-title
+            >
+            <template v-slot:append>
+              <v-icon>mdi-chevron-right</v-icon>
             </template>
-
-            <v-list-item-title>12312312</v-list-item-title>
           </v-list-item>
           <v-divider></v-divider>
-          <v-list-item color="primary" key="4" value="4">
-            <template v-slot:prepend>
-              <v-icon></v-icon>
-            </template>
-
-            <v-list-item-title>12312312</v-list-item-title>
-          </v-list-item>
         </v-list>
       </v-card>
     </div>
     <div class="settingBox">
       <h4>搜索设置</h4>
+      <v-card class="" style="margin-top: 10px">
+        <v-list style="padding: 0">
+          <v-list-item color="primary" key="2" value="2">
+            <v-list-item-title style="font-size: 14px"
+              >管理搜索引擎</v-list-item-title
+            >
+            <template v-slot:append>
+              <v-icon>mdi-chevron-right</v-icon>
+            </template>
+          </v-list-item>
+          <v-divider></v-divider>
+        </v-list>
+      </v-card>
     </div>
+
+    <!-- <div class="settingBox">
+      <h4>隐私和安全保护</h4>
+      <v-card class="" style="margin-top: 10px">
+        <v-list style="padding: 0">
+          <v-list-item color="primary" key="2" value="2">
+            <v-list-item-title style="font-size: 14px"
+              >管理搜索引擎</v-list-item-title
+            >
+            <template v-slot:append>
+              <v-icon>mdi-chevron-right</v-icon>
+            </template>
+          </v-list-item>
+          <v-divider></v-divider>
+        
+        </v-list>
+      </v-card>
+    </div> -->
   </div>
 </template>
 
@@ -63,7 +104,17 @@
 
 .userItem {
   display: flex;
-  padding: 5px 10px;
+  padding: 10px 10px;
   gap: 20px;
+  justify-content: space-between;
+  .userInfo {
+    flex: 1;
+    .userName {
+      font-size: 14px;
+    }
+    .userDocs {
+      font-size: 12px;
+    }
+  }
 }
 </style>

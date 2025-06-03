@@ -57,7 +57,7 @@
 
         <template v-slot:default="{ isActive }">
           <v-card title="Dialog">
-            <v-timeline >
+            <v-timeline>
               <v-timeline-item
                 v-for="(year, i) in years"
                 :key="i"
@@ -76,9 +76,7 @@
                   >
                     Lorem ipsum
                   </h2>
-                  <div>
-                  123
-                  </div>
+                  <div>123</div>
                 </div>
               </v-timeline-item>
             </v-timeline>
@@ -126,8 +124,11 @@ import * as setting from "../assets/lottie/setting.json";
 import * as web from "../assets/lottie/Web.json";
 import * as link from "../assets/lottie/Link (1).json";
 import * as user from "../assets/lottie/approved user.json";
+import * as register from "../assets/lottie/";
+
 
 import lottie from "lottie-web";
+import { AutoStore } from "../store/auto";
 const navItemIndex = ref("/");
 const router = useRouter();
 
@@ -139,6 +140,10 @@ interface NavItem {
   icon: any;
   use: any;
 }
+
+const useAuto = AutoStore();
+
+console.log(useAuto.user);
 
 const years = ref([
   {

@@ -26,10 +26,33 @@ const routes: RouteRecordRaw[] = [
             component: () => import("../pages/webs/index.vue"),
           },
           {
+            path: "/web/:id",
+            name: "webIDIndex",
+            component: () => import("../pages/webs/id.vue"),
+          },
+          // 设置分类导航路由
+          {
             path: "/setting",
             name: "settingIndex",
             component: () => import("../pages/setting/index.vue"),
           },
+          {
+            path: "/setting/engine",
+            name: "settingEngineIndex",
+            component: () => import("../pages/setting/engine/index.vue"),
+          },
+          // 用户相关路由
+          {
+            path: "/user",
+            name: "userIndex",
+            component: () => import("../pages/user/index.vue"),
+          },
+          {
+            path: "/register",
+            name: "registerIndex",
+            component: () => import("../pages/user/register/index.vue"),
+          },
+
           {
             path: "/links",
             name: "linksIndex",

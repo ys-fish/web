@@ -33,6 +33,7 @@
           color="white"
           v-for="n in 10"
           :key="n"
+          to="/web/13"
         >
           <div class="web_box">
             <div class="web_logo">
@@ -82,6 +83,7 @@
       flex-wrap: wrap;
       gap: 20px; /* 间隔 20px */
       .web_hot_card {
+        cursor: pointer;
         flex: 1 0 calc((100% - 4 * 20px) / 5); /* 一行5个，间隔4个20px */
         box-sizing: border-box;
         height: 110px; /* 你可以根据需要修改 */
@@ -96,10 +98,25 @@
           .web_logo {
             width: 80px;
             height: 80px;
-            background: red;
+            // background: red;
             display: flex;
             align-items: center;
             justify-content: center;
+          }
+          .web_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80px;
+            .name {
+              font-size: 16px;
+              font-weight: bold;
+            }
+            .tag {
+              font-size: 14px;
+              color: #888;
+              flex: 1;
+            }
           }
         }
       }

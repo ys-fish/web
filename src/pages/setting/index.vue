@@ -58,7 +58,7 @@
       <h4>搜索设置</h4>
       <v-card class="" style="margin-top: 10px">
         <v-list style="padding: 0">
-          <v-list-item color="primary" key="2" value="2">
+          <v-list-item color="primary" key="2" value="2" to="/setting/engine">
             <v-list-item-title style="font-size: 14px"
               >管理搜索引擎</v-list-item-title
             >

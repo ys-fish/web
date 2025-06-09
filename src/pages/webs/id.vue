@@ -4,7 +4,7 @@
       <div class="webInfoHeaderBox">
         <div class="webInfoLogo">
           <div>
-            <v-img width="40" cover src="https://cn.vuejs.org/logo.svg"></v-img>
+            <v-img width="60" cover src="https://cn.vuejs.org/logo.svg"></v-img>
           </div>
         </div>
         <div
@@ -33,11 +33,11 @@
         qwewqeqweqweqweqw21313122akdkasdkadakdkakdasksakkdakdkasd
         kaskkdkwqewqekqwkrewqkkxckczxkaskrkqewrkqeqweqweqweqweqweqweqweqweqw
       </div>
-      <div style="display: flex; align-items: center;margin-top: 20px;gap: 20px;">
+      <div style="display: flex; align-items: center;margin-top: 10px;gap: 20px;">
         <v-btn flat color="#154599" > Button </v-btn>
         <v-icon size="16">mdi-share-variant-outline</v-icon>
       </div>
-      <div style="font-size: 14px;margin-top: 5px;">由黎明xxw提供和更新</div>
+      <div style="font-size: 12px;margin-top: 5px;">由黎明xxw提供和更新</div>
     </div>
   </div>
 </template>
@@ -50,14 +50,14 @@
   padding: 15px 25px;
   background: #f9f9f9;
   .webInfoHeader {
-    width: 70%;
+    width: 85%;
     margin: 80px auto;
     .webInfoHeaderBox {
       display: flex;
       gap: 20px;
       .webInfoLogo {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 10px;
         background: white;
         display: flex;
@@ -65,7 +65,7 @@
         justify-content: center;
       }
       .webInfoTitle {
-        font-size: 20px;
+        font-size: 24px;
       }
       .webInfoDocs {
         font-size: 14px;

@@ -41,6 +41,11 @@ const routes: RouteRecordRaw[] = [
             name: "settingEngineIndex",
             component: () => import("../pages/setting/engine/index.vue"),
           },
+          {
+            path: "/setting/theme",
+            name: "settingThemeIndex",
+            component: () => import("../pages/setting/theme/index.vue"),
+          },
           // 用户相关路由
           {
             path: "/user",

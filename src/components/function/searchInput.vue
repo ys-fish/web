@@ -160,6 +160,7 @@ const SearchClick = () => {
   left: 50%;
   top: 240px;
   overflow: hidden;
+  background: white;
   .searchL {
     display: flex;
     height: 50px;

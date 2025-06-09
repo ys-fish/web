@@ -5,8 +5,9 @@ import bannerVue from "../components/banner.vue";
 <template>
   <div class="App">
     <bannerVue />
-
-    <router-view></router-view>
+    <div style="width: 100%; height: 100%">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 

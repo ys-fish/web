@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const drawer = ref<boolean>(false);
+</script>
+
 <template>
   <div class="setting">
     <div class="engineBox">
@@ -94,6 +100,28 @@
           </v-list>
         </v-card>
       </div>
+
+      <v-navigation-drawer v-model="drawer" temporary>
+        <v-list-item
+          prepend-avatar="https://randomuser.me/api/portraits/men/78.jpg"
+          title="John Leider"
+        ></v-list-item>
+
+        <v-divider></v-divider>
+
+        <v-list density="compact" nav>
+          <v-list-item
+            prepend-icon="mdi-view-dashboard"
+            title="Home"
+            value="home"
+          ></v-list-item>
+          <v-list-item
+            prepend-icon="mdi-forum"
+            title="About"
+            value="about"
+          ></v-list-item>
+        </v-list>
+      </v-navigation-drawer>
     </div>
   </div>
 </template>
@@ -102,10 +130,11 @@
 .setting {
   background: #f9f9f9;
   width: 100%;
+  height: 100vh;
   .engineBox {
     width: 700px;
     margin: 0 auto;
-    margin-top: 20px;
+    padding-top: 20px;
     .exit {
       display: flex;
       align-items: center;

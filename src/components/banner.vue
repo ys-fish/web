@@ -114,6 +114,7 @@
       </div>
     </div>
   </div>
+  <div style="width: 80px"></div>
 </template>
 
 <script lang="ts" setup>
@@ -125,7 +126,6 @@ import * as web from "../assets/lottie/Web.json";
 import * as link from "../assets/lottie/Link (1).json";
 import * as user from "../assets/lottie/approved user.json";
 import * as register from "../assets/lottie/";
-
 
 import lottie from "lottie-web";
 import { AutoStore } from "../store/auto";
@@ -244,9 +244,14 @@ onMounted(async () => {
   flex-direction: column;
   justify-content: space-between;
   background: #f3f3f3;
+  // background: rgba(0, 0, 0, 0.1);
   padding: 0px 5px;
   padding-top: 5px;
   padding-bottom: 5px;
+  position: fixed;
+  left: 0px;
+  z-index: 999;
+
   .banner_tab {
     height: 60px;
     border-radius: 5px;

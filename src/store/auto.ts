@@ -29,12 +29,4 @@ export const AutoStore = defineStore("AutoStore", {
       this.Token = "";
     },
   },
-  persist: {
-    enabled: true,
-    strategies: [
-      {
-        storage: localStorage,
-      },
-    ],
-  },
 });

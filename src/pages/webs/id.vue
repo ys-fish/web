@@ -34,10 +34,15 @@
         kaskkdkwqewqekqwkrewqkkxckczxkaskrkqewrkqeqweqweqweqweqweqweqweqweqw
       </div>
       <div style="display: flex; align-items: center;margin-top: 10px;gap: 20px;">
-        <v-btn flat color="#154599" > Button </v-btn>
+        <v-btn flat color="#154599" > 进入网站 </v-btn>
         <v-icon size="16">mdi-share-variant-outline</v-icon>
       </div>
       <div style="font-size: 12px;margin-top: 5px;">由黎明xxw提供和更新</div>
+
+
+      <div class="couselBox">
+        <div></div>
+      </div>
     </div>
   </div>
 </template>
@@ -89,6 +94,14 @@
       width: 500px;
       margin-top: 30px;
     }
+  }
+
+  .couselBox{
+    box-sizing: border-box;
+    padding: 20px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
   }
 }
 </style>

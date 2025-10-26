@@ -21,6 +21,16 @@ const routes: RouteRecordRaw[] = [
             component: () => import("../pages/home/search.vue"),
           },
           {
+            path: "/class/:id",
+            name: "classIndex",
+            component: () => import("../pages/home/class.vue"),
+          },
+          {
+            path: "/type/:id",
+            name: "typeIndex",
+            component: () => import("../pages/home/fish.vue"),
+          },
+          {
             path: "/webs",
             name: "websIndex",
             component: () => import("../pages/webs/index.vue"),
@@ -66,6 +76,11 @@ const routes: RouteRecordRaw[] = [
         ],
       },
     ],
+  },
+  {
+    path: "/welcome",
+    name: "welcomeIndex",
+    component: () => import("../pages/welcome.vue"),
   },
 ];
 

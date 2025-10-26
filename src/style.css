@@ -22,3 +22,12 @@ body {
   fill: #154599 !important;
   stroke: #154599 !important;
 }
+
+
+#bid path {
+  fill: white;
+  stroke: white;
+}
+
+
+

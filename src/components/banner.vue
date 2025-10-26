@@ -56,32 +56,7 @@
         </template>
 
         <template v-slot:default="{ isActive }">
-          <v-card title="Dialog">
-            <v-timeline>
-              <v-timeline-item
-                v-for="(year, i) in years"
-                :key="i"
-                :dot-color="year.color"
-                size="small"
-              >
-                <template v-slot:opposite>
-                  <div
-                    :class="`pt-1 headline font-weight-bold text-${year.color}`"
-                    v-text="year.year"
-                  ></div>
-                </template>
-                <div>
-                  <h2
-                    :class="`mt-n1 headline font-weight-light mb-4 text-${year.color}`"
-                  >
-                    Lorem ipsum
-                  </h2>
-                  <div>123</div>
-                </div>
-              </v-timeline-item>
-            </v-timeline>
-            <v-btn text="Close Dialog" @click="isActive.value = false"></v-btn>
-          </v-card>
+          <v-card title="新增功能"> </v-card>
         </template>
       </v-dialog>
 
@@ -182,7 +157,7 @@ const navItem = ref<NavItem[]>([
     use: null,
   },
   {
-    title: "我的网站",
+    title: "图鉴列表",
     to: "/links",
     icon: link,
     use: null,

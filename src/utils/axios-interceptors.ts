@@ -11,7 +11,7 @@ import axios, { type AxiosInstance, type AxiosRequestConfig } from "axios";
 import { computed } from "vue";
 // 124.71.13.3
 // localhost
-export const BASE_URL = "http://124.71.13.3:2001/api";
+export const BASE_URL = "http://localhost:1012/api";
 import router from "../router/index";
 import { AutoStore } from "../store/auto";
 import { cmessage } from "./message";

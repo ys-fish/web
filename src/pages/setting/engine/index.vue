@@ -1,7 +1,27 @@
 <script lang="ts" setup>
 import { ref } from "vue";
+import { get } from "../../../utils/axios-request";
+
+interface SearchItem {
+  id: number;
+  title: string;
+  link: string;
+}
 
 const drawer = ref<boolean>(false);
+const search_list = ref<SearchItem[]>([]);
+
+const searchFetch = async () => {
+  const { data } = await get("search");
+  search_list.value = data.data.map((item: SearchItem) => ({
+    id: item.id,
+    title: item.title,
+    link: item.link,
+  }));
+  console.log(search_list.value);
+};
+
+searchFetch();
 </script>
 
 <template>
@@ -60,31 +80,19 @@ const drawer = ref<boolean>(false);
               </div>
             </div>
             <v-radio-group>
-              <v-list-item color="primary" key="2" value="2">
+              <v-list-item
+                color="primary"
+                :value="item.id"
+                v-for="item in search_list"
+                :key="item.id"
+              >
                 <template v-slot:prepend="{}">
                   <v-list-item-action start>
                     <v-radio value="one">
                       <template v-slot:label>
                         <div class="enginItem">
-                          <div class="enginItemTitle">谷歌搜索</div>
-                          <div class="enginItemDocs">www.google.com</div>
-                        </div>
-                      </template>
-                    </v-radio>
-                  </v-list-item-action>
-                </template>
-                <template v-slot:append>
-                  <v-icon>mdi-dots-vertical</v-icon>
-                </template>
-              </v-list-item>
-              <v-list-item color="primary" key="3" value="3">
-                <template v-slot:prepend="{}">
-                  <v-list-item-action start>
-                    <v-radio value="one1">
-                      <template v-slot:label>
-                        <div class="enginItem">
-                          <div class="enginItemTitle">百度搜索</div>
-                          <div class="enginItemDocs">www.baidu.com</div>
+                          <div class="enginItemTitle">{{ item.title }}</div>
+                          <div class="enginItemDocs">{{ item.link }}</div>
                         </div>
                       </template>
                     </v-radio>

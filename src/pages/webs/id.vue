@@ -1,6 +1,18 @@
 <template>
   <div class="webInfo">
     <div class="webInfoMock"></div>
+
+    <div>
+      <v-img
+      cover
+      height="80vh"
+        src="https://cainwenxin.oss-cn-shenzhen.aliyuncs.com/eff7c2e61dcaaeb893b813fb12e1d40b481032482.jpg%401192w.webp"
+      ></v-img>
+    </div>
+    <div class="fishHeader">
+      <h4>长鳍鱲</h4>
+    </div>
+
     <div class="webInfoHeader">
       <div class="webInfoHeaderBox">
         <div class="webInfoLogo">
@@ -68,48 +80,81 @@
               <div><v-icon>mdi-chevron-right</v-icon></div>
             </div>
             <v-divider></v-divider>
-            <div style="padding: 20px 20px;font-size: 14px;">
+            <div style="padding: 20px 20px; font-size: 14px">
               抖音让每一个人看见并连接更大的世界，鼓励表达、沟通和记录，激发创造，丰富人们的精神世界，让生活更美好。
-              抖音电脑版，新功能上线，快来体验！<br /> 【小窗播放，自由切换】
-              视频变小窗，精彩不占屏，学习娱乐两不误；
+              抖音电脑版，新功能上线，快来体验！<br />
+              【小窗播放，自由切换】 视频变小窗，精彩不占屏，学习娱乐两不误；
               全屏or小窗，随你所想，屏幕空间尽在掌握。 【抖音视频，秒变壁纸】
               选择你喜欢的视频，设置为桌面壁纸，陪伴一天好心情。
               还可以点击“看抖音”、“看作者”，一键观看更省心。
             </div>
           </div>
 
-            <div class="couselBox">
+          <div class="couselBox">
             <div class="couselBoxHeader">
               <div style="font-weight: 700">评分和评价</div>
               <div><v-icon>mdi-chevron-right</v-icon></div>
             </div>
             <v-divider></v-divider>
-            <div style="padding: 20px 20px;font-size: 14px;">
+            <div style="padding: 20px 20px; font-size: 14px">
               抖音让每一个人看见并连接更大的世界，鼓励表达、沟通和记录，激发创造，丰富人们的精神世界，让生活更美好。
-              抖音电脑版，新功能上线，快来体验！<br /> 【小窗播放，自由切换】
-              视频变小窗，精彩不占屏，学习娱乐两不误；
+              抖音电脑版，新功能上线，快来体验！<br />
+              【小窗播放，自由切换】 视频变小窗，精彩不占屏，学习娱乐两不误；
               全屏or小窗，随你所想，屏幕空间尽在掌握。 【抖音视频，秒变壁纸】
               选择你喜欢的视频，设置为桌面壁纸，陪伴一天好心情。
               还可以点击“看抖音”、“看作者”，一键观看更省心。
             </div>
           </div>
         </div>
-        <div class="centenRight"></div>
+        <div class="centenRight">
+          <div style="display: flex; align-items: center; margin-top: 20px">
+            <h4>发现更多</h4>
+            <v-icon>mdi-chevron-right</v-icon>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.webInfoMock {
+  width: 100vw;
+  height: 500px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 65%,
+    rgba(10, 10, 12, 0.1) 70%,
+    #0a0a0c 90%
+  );
+
+  position: absolute;
+
+  z-index: 10;
+}
+.fishVideoBox {
+  .fishVideo {
+    width: 100%;
+    margin-top: -200px;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+.fishHeader {
+  width: 70%;
+  color: white;
+}
+
 .webInfo {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 15px 25px;
+  // padding: 15px 25px;
   background: #f9f9f9;
   .webInfoHeader {
     width: 84%;
-    margin: 80px auto;
+    margin: 300px auto;
     .webInfoHeaderBox {
       display: flex;
       gap: 20px;
@@ -158,19 +203,6 @@
       width: 78%;
       position: relative;
     }
-  }
-
-  .webInfoMock {
-    position: fixed;
-    width: 100vw;
-    height: 300px;
-    left: 0;
-    top: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 128, 0, 0.1) 30%,
-      rgba(0, 128, 0, 0) 70%
-    );
   }
 
   .couselBox {
